@@ -15,6 +15,8 @@ public class CalculadoraEscolar {
         System.out.println(calc.nivelSuma);
         
         */
+        
+        Usuario.Ingresar("Matías", "sadgjjosdag","Profesor", 7);
     }
     
 }

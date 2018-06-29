@@ -44,7 +44,12 @@ public class Calculo {
     public static int Distributiva_suma (int a,int b,int c){
         return (a*b+a*c);
     }
-
+    
+    public static int Asociativa_div (int a,int b,int c){
+        int resultado= a/(b+c);
+        return resultado;
+    }
+    
     public Calculo() {
     }
         

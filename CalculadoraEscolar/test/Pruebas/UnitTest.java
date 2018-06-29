@@ -50,7 +50,7 @@ public class UnitTest {
         
         assertEquals("Fallo Usuario.Registrar",resultado, esperado);
     }
-//    //TEST REALIZADOS POR NICOLAS LAMBERTUCCI
+    //TEST REALIZADOS POR NICOLAS LAMBERTUCCI
     
     //Probando propiedad conmutativa de la multiplicación
     @Test
@@ -107,6 +107,7 @@ public class UnitTest {
         assertTrue("Fallò Calculo.Multiplicación",mismoSigno);
     }
     
+    //Probando propiedad Distributiva de la Multiplicación
     @Test
     public void testDistributiva(){
         int a=3, b=5, c=6;
@@ -116,5 +117,31 @@ public class UnitTest {
     }
     
     
-}
 
+
+
+//PRUEBAS REALIZADAS POR CAMILA VELOCCI
+//Probando propiedad asociativa de la división
+    @Test
+    public void testAsociativa(){
+        int a=15, b=2, c=3;
+        int resultado= calc.Asociativa_div(15,2,3);
+        int parentesis= b+c;
+        int esperado= a/parentesis;
+        assertEquals("Fallo Calculo.Asociativa_div",esperado, resultado);
+    }
+
+
+//Probando ingreso al sistema
+    @Test
+    public void testIngreso(){
+        String usuario="Juan";
+        String password="JuanABC";
+        int nivel=5;
+        String cargo="Profesor";
+        boolean esperado=true;
+        assertTrue("Falló Usuario.Ingresar",esperado==Usuario.Ingresar(usuario, password, cargo, nivel));
+        
+    }
+
+}
