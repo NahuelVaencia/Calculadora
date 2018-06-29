@@ -13,7 +13,7 @@ public class UnitTest {
     
     public UnitTest() {
     }
-    
+    //TEST REALIZADOS POR NAHUEL VALENCIA
     //Probando funcionamiento del metodo suma
     @Test
     public void testSuma(){
@@ -49,4 +49,34 @@ public class UnitTest {
         
         assertEquals("Fallo Usuario.Registrar",resultado, esperado);
     }
+//    //TEST REALIZADOS POR NICOLAS LAMBERTUCCI
+//    
+//    //Probando propiedad conmutativa de la multiplicación
+//    @Test
+//    public void multiplicar(){
+//        int metodo1= Calculo.Multiplicación(3,15);
+//        int metodo2= Calculo.Multiplicación(3, 15);
+//        assertEquals("Fallo Calculo.Multiplicación",metodo1, metodo2);
+//    }
+//    
+//    //Probando funcionamiento de la resta
+//    @Test
+//    public void resta() {
+//   
+//        int metodo= Calculo.Resta(25, 100);
+//        int result= Calculo.Resta(25,100);
+//        boolean resu;
+//        boolean resu2;
+//        if (result >0){
+//            resu2 = true;
+//        }else{
+//            resu2 =false;
+//        }
+//        if (metodo < 0){
+//        resu= true;
+//        }else{
+//        resu=false;
+//        }
+//        assertTrue("Fallo Calculo.Resta",resu && resu2);         
+//    }
 }
