@@ -42,7 +42,10 @@ public class Calculo {
     }
     
     public static int Distributiva_suma (int a,int b,int c){
-        return a*(b+c);
+        return (a*b+a*c);
+    }
+
+    public Calculo() {
     }
         
 }

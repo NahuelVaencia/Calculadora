@@ -14,6 +14,7 @@ public class UnitTest {
     public UnitTest() {
     }
     //TEST REALIZADOS POR NAHUEL VALENCIA
+    
     //Probando funcionamiento del metodo suma
     @Test
     public void testSuma(){
@@ -50,33 +51,70 @@ public class UnitTest {
         assertEquals("Fallo Usuario.Registrar",resultado, esperado);
     }
 //    //TEST REALIZADOS POR NICOLAS LAMBERTUCCI
-//    
-//    //Probando propiedad conmutativa de la multiplicación
-//    @Test
-//    public void multiplicar(){
-//        int metodo1= Calculo.Multiplicación(3,15);
-//        int metodo2= Calculo.Multiplicación(3, 15);
-//        assertEquals("Fallo Calculo.Multiplicación",metodo1, metodo2);
-//    }
-//    
-//    //Probando funcionamiento de la resta
-//    @Test
-//    public void resta() {
-//   
-//        int metodo= Calculo.Resta(25, 100);
-//        int result= Calculo.Resta(25,100);
-//        boolean resu;
-//        boolean resu2;
-//        if (result >0){
-//            resu2 = true;
-//        }else{
-//            resu2 =false;
-//        }
-//        if (metodo < 0){
-//        resu= true;
-//        }else{
-//        resu=false;
-//        }
-//        assertTrue("Fallo Calculo.Resta",resu && resu2);         
-//    }
+    
+    //Probando propiedad conmutativa de la multiplicación
+    @Test
+    public void multiplicar(){
+        int metodo1= Calculo.Multiplicación(3,15);
+        int metodo2= Calculo.Multiplicación(15,3);
+        assertEquals("Fallo Calculo.Multiplicación",metodo1, metodo2);
+    }
+    
+    //Probando funcionamiento de la resta
+    @Test
+    public void resta() {
+   
+        int metodo= Calculo.Resta(25, 100);
+        int result= Calculo.Resta(250,100);
+        boolean resu;
+        boolean resu2;
+        if (result >0){
+            resu2 = true;
+        }else{
+            resu2 =false;
+        }
+        if (metodo < 0){
+        resu= true;
+        }else{
+        resu=false;
+        }
+        assertTrue("Fallo Calculo.Resta",resu && resu2);         
+    }
+    
+    
+    // TEST REALIZADOS POR AGUSTÍN OCHOA
+    
+    //Ejemplo uso @Before
+     Calculo calc;
+     
+        @Before
+    public void definir() {
+        calc = new Calculo();
+        } 
+    //Probando funcionamiento de regla de signos en Multiplicación
+    @Test
+    public void testSignos(){
+        int a=-10, b=2;
+        int c=10, d=2;
+        int resultado1 = calc.Multiplicación(a, b);
+        int resultado2 = calc.Multiplicación(c, d);
+        boolean mismoSigno=false;
+        if (resultado1<0 && resultado2>0){
+            mismoSigno=true;
+        }
+        
+        
+        assertTrue("Fallò Calculo.Multiplicación",mismoSigno);
+    }
+    
+    @Test
+    public void testDistributiva(){
+        int a=3, b=5, c=6;
+        int resultado = Calculo.Distributiva_suma(3, 5, 6);
+        int esperado = a*(b+c); 
+        assertEquals("Fallo Calculo.Distributiva_suma",esperado, resultado);       
+    }
+    
+    
 }
+
